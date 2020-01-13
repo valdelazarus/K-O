@@ -3,4 +3,4 @@
 
 <b>Game Overview<b>
  
- This is a 3D fighting game in which each level requires the player to defeat enemies in order to proceed. 
+ <p>This is a 3D fighting game in which each level requires the player to defeat enemies in order to proceed.<p>
