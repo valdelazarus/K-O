@@ -39,7 +39,7 @@ public class PlayerAttack : MonoBehaviour {
 
     void ComboAttacks() { 
 
-        if(Input.GetKeyDown(KeyCode.Z)) {
+        if(Input.GetButtonDown(Button.FIRE_1)) {
 
             if (current_Combo_State == ComboState.PUNCH_3 ||
                 current_Combo_State == ComboState.KICK_1 ||
@@ -64,7 +64,7 @@ public class PlayerAttack : MonoBehaviour {
 
         } // if punch
 
-        if (Input.GetKeyDown(KeyCode.X)) {
+        if (Input.GetButtonDown(Button.FIRE_2)) {
 
             // if the current combo is punch 3 or kick 2
             // return meaning exit because we have no combos to perform

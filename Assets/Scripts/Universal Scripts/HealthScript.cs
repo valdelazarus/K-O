@@ -9,7 +9,7 @@ public class HealthScript : MonoBehaviour {
     private CharacterAnimation animationScript;
     private EnemyMovement enemyMovement;
 
-    private bool characterDied;
+    public bool characterDied;
 
     public bool is_Player;
 
