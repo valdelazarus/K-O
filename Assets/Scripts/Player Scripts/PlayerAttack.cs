@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public enum ComboState { 
     NONE,
@@ -39,7 +40,7 @@ public class PlayerAttack : MonoBehaviour {
 
     void ComboAttacks() { 
 
-        if(Input.GetButtonDown(Button.FIRE_1)) {
+        if(CrossPlatformInputManager.GetButtonDown(Button.FIRE_1)) {
 
             if (current_Combo_State == ComboState.PUNCH_3 ||
                 current_Combo_State == ComboState.KICK_1 ||
@@ -64,7 +65,7 @@ public class PlayerAttack : MonoBehaviour {
 
         } // if punch
 
-        if (Input.GetButtonDown(Button.FIRE_2)) {
+        if (CrossPlatformInputManager.GetButtonDown(Button.FIRE_2)) {
 
             // if the current combo is punch 3 or kick 2
             // return meaning exit because we have no combos to perform

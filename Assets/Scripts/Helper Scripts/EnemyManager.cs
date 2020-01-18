@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-    public static EnemyManager instance;
-
     [SerializeField]
     private GameObject enemyPrefab;
 
@@ -14,8 +12,7 @@ public class EnemyManager : MonoBehaviour {
     int currentEnemyCount;
 
     void Awake() {
-        if (instance == null)
-            instance = this;
+
     }
 
     void Start() {

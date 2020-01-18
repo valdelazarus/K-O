@@ -48,6 +48,10 @@ MonoBehaviour:
     m_Bits: 512
   radius: 1
   damage: 5
+  minDamage: 5
+  maxDamage: 10
+  criticalMultiplier: 1.5
+  criticalChance: 0.05
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -99,6 +103,10 @@ MonoBehaviour:
     m_Bits: 512
   radius: 1
   damage: 5
+  minDamage: 5
+  maxDamage: 10
+  criticalMultiplier: 1.5
+  criticalChance: 0.05
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -150,6 +158,10 @@ MonoBehaviour:
     m_Bits: 512
   radius: 1
   damage: 5
+  minDamage: 5
+  maxDamage: 10
+  criticalMultiplier: 1.5
+  criticalChance: 0.05
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -201,6 +213,10 @@ MonoBehaviour:
     m_Bits: 512
   radius: 1
   damage: 5
+  minDamage: 5
+  maxDamage: 10
+  criticalMultiplier: 1.5
+  criticalChance: 0.05
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
@@ -310,6 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  characterDied: 0
   is_Player: 1
 --- !u!114 &7998378528251579662
 MonoBehaviour:

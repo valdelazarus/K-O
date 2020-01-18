@@ -26,7 +26,10 @@ public class HealthScript : MonoBehaviour {
     public void ApplyDamage(float damage, bool knockDown) {
 
         if (characterDied)
+        {
             return;
+        }
+            
 
         health -= damage;
 
@@ -43,6 +46,11 @@ public class HealthScript : MonoBehaviour {
             if(is_Player) {
                 GameObject.FindWithTag(Tags.ENEMY_TAG)
                     .GetComponent<EnemyMovement>().enabled = false;
+            }
+            //if enemy, increment score
+            else
+            {
+                FindObjectOfType<GameManager>()?.AddScore(GetComponent<EnemyStats>().scoreValue);
             }
 
             return;

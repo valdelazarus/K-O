@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -32,19 +33,19 @@ public class PlayerMovement : MonoBehaviour {
     void DetectMovement() {
 
         myBody.velocity = new Vector3(
-            Input.GetAxisRaw(Axis.HORIZONTAL_AXIS) * (-walk_Speed),
+            CrossPlatformInputManager.GetAxisRaw(Axis.HORIZONTAL_AXIS) * (-walk_Speed),
             myBody.velocity.y,
-            Input.GetAxisRaw(Axis.VERTICAL_AXIS) * (-z_Speed));
+            CrossPlatformInputManager.GetAxisRaw(Axis.VERTICAL_AXIS) * (-z_Speed));
 
     } // movement
 
     void RotatePlayer() { 
 
-        if(Input.GetAxisRaw(Axis.HORIZONTAL_AXIS) > 0) {
+        if(CrossPlatformInputManager.GetAxisRaw(Axis.HORIZONTAL_AXIS) > 0) {
 
             transform.rotation = Quaternion.Euler(0f, rotation_Y, 0f);
 
-        } else if(Input.GetAxisRaw(Axis.HORIZONTAL_AXIS) < 0) {
+        } else if(CrossPlatformInputManager.GetAxisRaw(Axis.HORIZONTAL_AXIS) < 0) {
 
             transform.rotation = Quaternion.Euler(0f, Mathf.Abs(rotation_Y), 0f);
 
@@ -54,8 +55,8 @@ public class PlayerMovement : MonoBehaviour {
 
     void AnimatePlayerWalk() { 
     
-        if(Input.GetAxisRaw(Axis.HORIZONTAL_AXIS) != 0 ||
-                Input.GetAxisRaw(Axis.VERTICAL_AXIS) != 0) {
+        if(CrossPlatformInputManager.GetAxisRaw(Axis.HORIZONTAL_AXIS) != 0 ||
+                CrossPlatformInputManager.GetAxisRaw(Axis.VERTICAL_AXIS) != 0) {
 
             player_Anim.Walk(true);
     

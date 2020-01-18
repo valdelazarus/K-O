@@ -6,11 +6,18 @@ public class AttackUniversal : MonoBehaviour {
 
     public LayerMask collisionLayer;
     public float radius = 1f;
-    public float damage = 2f;
+
+    public float damage;
+    public float minDamage;
+    public float maxDamage;
+    public float criticalMultiplier;
+    public float criticalChance;
 
     public bool is_Player, is_Enemy;
 
     public GameObject hit_FX_Prefab;
+
+    float baseDamage;
 
     void Update() {
         DetectCollision();    
@@ -39,7 +46,18 @@ public class AttackUniversal : MonoBehaviour {
 
                 Instantiate(hit_FX_Prefab, hitFX_Pos, Quaternion.identity);
 
-                if(gameObject.CompareTag(Tags.LEFT_ARM_TAG) ||
+                //randomize damage and calculate with critical chance
+                baseDamage = damage;
+
+                damage += Random.Range(minDamage, maxDamage);
+
+                bool isCritical = Random.value < criticalChance;
+                if (isCritical)
+                    damage *= criticalMultiplier;
+
+                damage = (int)damage;
+
+                if (gameObject.CompareTag(Tags.LEFT_ARM_TAG) ||
                     gameObject.CompareTag(Tags.LEFT_LEG_TAG)) {
 
                     hit[0].GetComponent<HealthScript>().ApplyDamage(damage, true);
@@ -49,12 +67,28 @@ public class AttackUniversal : MonoBehaviour {
                     hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
                 }
 
+                hit[0].GetComponent<AttackedScrollingText>().OnAttack(damage);
+
+                damage = baseDamage;
 
             } // if is player
 
 
             if(is_Enemy) {
+                //randomize damage and calculate with critical chance
+                baseDamage = damage;
+
+                damage += Random.Range(minDamage, maxDamage);
+
+                bool isCritical = Random.value < criticalChance;
+                if (isCritical)
+                    damage *= criticalMultiplier;
+
+                damage = (int)damage;
+
                 hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
+
+                damage = baseDamage;
             } // is enemy
 
             gameObject.SetActive(false);

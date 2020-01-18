@@ -22,8 +22,9 @@ public class ShakeCamera : MonoBehaviour {
         Shake();
     }
 
-    void Shake() { 
+    void Shake() {
 
+        startPosition = transform.localPosition;
         if(should_Shake) { 
         
             if(duration > 0f) {
