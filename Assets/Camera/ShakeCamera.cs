@@ -29,7 +29,9 @@ public class ShakeCamera : MonoBehaviour {
         
             if(duration > 0f) {
 
-                transform.localPosition = startPosition + Random.insideUnitSphere * power;
+                Vector3 newPos = startPosition + Random.insideUnitSphere * power;
+                newPos.y = startPosition.y;
+                transform.localPosition = newPos;
                 duration -= Time.deltaTime * slowDownAmount;
 
             } else {

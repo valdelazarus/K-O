@@ -28,8 +28,10 @@ public class EnemyManager : MonoBehaviour {
             //below is temporary
             FindObjectOfType<LevelManager>().LoadScene("Game Win");
         }
-        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-        
+        else
+        {
+            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        }
     }
 
 } // class
