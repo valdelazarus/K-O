@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
     [SerializeField]
-    private GameObject enemyPrefab;
+    private GameObject[] enemyPrefab;
 
     public int maxEnemiesNumber;
 
@@ -30,7 +30,8 @@ public class EnemyManager : MonoBehaviour {
         }
         else
         {
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            int enemy = Random.Range(0, 2);
+            Instantiate(enemyPrefab[enemy], transform.position, Quaternion.identity);
         }
     }
 

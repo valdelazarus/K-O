@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterAnimationDelegate : MonoBehaviour {
 
     public GameObject left_Arm_Attack_Point, right_Arm_Attack_Point,
-            left_Leg_Attack_Point, right_Leg_Attack_Point;
+            left_Leg_Attack_Point, right_Leg_Attack_Point, spawn_Projectile_Point, projectile;
 
     public float stand_Up_Timer = 2f;
 
@@ -87,6 +87,11 @@ public class CharacterAnimationDelegate : MonoBehaviour {
 
     void UnTagLeft_Leg() {
         left_Leg_Attack_Point.tag = Tags.UNTAGGED_TAG;
+    }
+
+    void SpawnProjectile()
+    {
+        Instantiate(projectile, spawn_Projectile_Point.transform.position, Quaternion.identity);
     }
 
     void Enemy_StandUp() {

@@ -50,6 +50,11 @@ public class CharacterAnimation : MonoBehaviour {
             anim.SetTrigger(AnimationTags.ATTACK_3_TRIGGER);
         }
 
+        if (attack == 3)
+        {
+            anim.SetTrigger(AnimationTags.ATTACK_4_TRIGGER);
+        }
+
     } // enemy attack
 
     public void Play_IdleAnimaiton() {

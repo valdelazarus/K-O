@@ -19,6 +19,10 @@ public class EnemyMovement : MonoBehaviour {
 
     private bool followPlayer, attackPlayer;
 
+    public bool isMelee;
+
+    public GameObject childObject;
+
     void Awake() {
         enemyAnim = GetComponentInChildren<CharacterAnimation>();
         myBody = GetComponent<Rigidbody>();
@@ -34,6 +38,11 @@ public class EnemyMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        //Look at player on every frame
+        transform.LookAt(playerTarget);
+        childObject.transform.localRotation = Quaternion.identity;
+
         Attack();
     }
 
@@ -48,8 +57,6 @@ public class EnemyMovement : MonoBehaviour {
             return;
 
         if(Vector3.Distance(transform.position, playerTarget.position) > attack_Distance) {
-
-            transform.LookAt(playerTarget);
             myBody.velocity = transform.forward * speed;
 
             if(myBody.velocity.sqrMagnitude != 0) {
@@ -80,7 +87,10 @@ public class EnemyMovement : MonoBehaviour {
 
         if(current_Attack_Time > default_Attack_Time) {
 
-            enemyAnim.EnemyAttack(Random.Range(0, 3));
+            if (isMelee)
+                enemyAnim.EnemyAttack(Random.Range(0, 3)); //Perform melee animations
+            else
+                enemyAnim.EnemyAttack(3); //Perform ranged animation
 
             current_Attack_Time = 0f;
 

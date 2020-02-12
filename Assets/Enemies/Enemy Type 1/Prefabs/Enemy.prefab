@@ -82,6 +82,8 @@ MonoBehaviour:
   speed: 1.8
   attack_Distance: 1.3
   chase_Player_After_Attack: 0.2
+  isMelee: 1
+  childObject: {fileID: 6810632674181399501}
 --- !u!114 &7495058090437815414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +294,8 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 6135141401387266158}
   left_Leg_Attack_Point: {fileID: 0}
   right_Leg_Attack_Point: {fileID: 8868253151094862736}
+  spawn_Projectile_Point: {fileID: 0}
+  projectile: {fileID: 0}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: d66ea384f5e554d13b1f10ca6ffccf07, type: 3}
   fall_Sound: {fileID: 8300000, guid: e95e3d31f29ba49b386345970d646efc, type: 3}
