@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
     public float speed = 5f;
+    public float damage;
 
     private Rigidbody rb;
     private GameObject player;
@@ -37,7 +38,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         if(other.gameObject.tag.Equals(Tags.PLAYER_TAG))
         {
-            other.gameObject.GetComponent<HealthScript>().ApplyDamage(5, false);
+            other.gameObject.GetComponent<HealthScript>().ApplyDamage(damage, false);
         }
 
         if(!other.gameObject.tag.Equals(Tags.ENEMY_TAG))

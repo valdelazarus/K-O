@@ -11,7 +11,7 @@ public class HazardSpawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnHazard", initialDelay, spawnRate);
+        SpawnAllPositions();
     }
 
     
@@ -20,12 +20,20 @@ public class HazardSpawner : MonoBehaviour
         
     }
 
-    void SpawnHazard()
+    void SpawnRandomPosition()
     {
         int rand = Random.Range(0, hazardPrefabs.Length);
         int randPos = Random.Range(0, spawnPositions.Length);
 
         GameObject hazard = Instantiate(hazardPrefabs[rand], spawnPositions[randPos].position, Quaternion.identity);
         Destroy(hazard, spawnRate);
+    }
+    void SpawnAllPositions()
+    {
+        int rand = Random.Range(0, hazardPrefabs.Length);
+        foreach (Transform t in spawnPositions)
+        {
+            Instantiate(hazardPrefabs[rand], t.position, Quaternion.identity);
+        }
     }
 }

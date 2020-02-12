@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3247411358126883915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.841784, y: 1.5461997, z: 3.0621996}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 6661363122779182563}
   m_Father: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bf35a4e3874473ea995fd7ecb98ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  maxHealth: 200
   characterDied: 0
   is_Player: 0
 --- !u!114 &726424506
@@ -127,42 +127,6 @@ MonoBehaviour:
   chase_Player_After_Attack: 0.2
   isMelee: 0
   childObject: {fileID: 6661363122779210013}
---- !u!114 &209003959237627459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6661363122779210013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67ee25a469f6944508b2ec2bbc471188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &644917475217579226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6661363122779210013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f47fe6465e6b40bb99cc43893044910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  left_Arm_Attack_Point: {fileID: 0}
-  right_Arm_Attack_Point: {fileID: 0}
-  left_Leg_Attack_Point: {fileID: 0}
-  right_Leg_Attack_Point: {fileID: 0}
-  spawn_Projectile_Point: {fileID: 6661363122779213363}
-  projectile: {fileID: 9097967847061118417, guid: f7c4e2966900b4da59c2f824f7026dc6,
-    type: 3}
-  stand_Up_Timer: 2
-  whoosh_Sound: {fileID: 8300000, guid: d66ea384f5e554d13b1f10ca6ffccf07, type: 3}
-  fall_Sound: {fileID: 8300000, guid: e95e3d31f29ba49b386345970d646efc, type: 3}
-  ground_Hit_Sound: {fileID: 8300000, guid: bb16610f7d97443c79278fd0251f20d3, type: 3}
-  dead_Sound: {fileID: 8300000, guid: ccca65067798a40969e6bde304d5bdeb, type: 3}
 --- !u!82 &8896797264899374457
 AudioSource:
   m_ObjectHideFlags: 0
@@ -174,7 +138,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -259,6 +223,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &209003959237627459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6661363122779210013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ee25a469f6944508b2ec2bbc471188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &644917475217579226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6661363122779210013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f47fe6465e6b40bb99cc43893044910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left_Arm_Attack_Point: {fileID: 0}
+  right_Arm_Attack_Point: {fileID: 0}
+  left_Leg_Attack_Point: {fileID: 0}
+  right_Leg_Attack_Point: {fileID: 0}
+  spawn_Projectile_Point: {fileID: 6661363122779213363}
+  projectile: {fileID: 9097967847061118417, guid: f7c4e2966900b4da59c2f824f7026dc6,
+    type: 3}
+  stand_Up_Timer: 2
+  whoosh_Sound: {fileID: 8300000, guid: d66ea384f5e554d13b1f10ca6ffccf07, type: 3}
+  fall_Sound: {fileID: 8300000, guid: e95e3d31f29ba49b386345970d646efc, type: 3}
+  ground_Hit_Sound: {fileID: 8300000, guid: bb16610f7d97443c79278fd0251f20d3, type: 3}
+  dead_Sound: {fileID: 8300000, guid: ccca65067798a40969e6bde304d5bdeb, type: 3}
 --- !u!1001 &6661363122779310483
 PrefabInstance:
   m_ObjectHideFlags: 0

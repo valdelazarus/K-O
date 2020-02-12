@@ -11,9 +11,9 @@ public class HealthUI : MonoBehaviour {
         health_UI = GameObject.FindWithTag(Tags.HEALTH_UI).GetComponent<Image>();    
     }
 
-    public void DisplayHealth(float value) {
+    public void DisplayHealth(float value, float maxValue) {
 
-        value /= 100f;
+        value /= maxValue;
 
         if (value < 0f)
             value = 0f;

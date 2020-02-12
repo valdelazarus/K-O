@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour {
 
-    public float health = 100f;
+    public float maxHealth;
+    float health;
 
     private CharacterAnimation animationScript;
     private EnemyMovement enemyMovement;
@@ -18,6 +19,7 @@ public class HealthScript : MonoBehaviour {
     void Awake() {
         animationScript = GetComponentInChildren<CharacterAnimation>();
 
+        health = maxHealth;
         if(is_Player) {
             health_UI = GetComponent<HealthUI>();
         }
@@ -29,13 +31,12 @@ public class HealthScript : MonoBehaviour {
         {
             return;
         }
-            
 
         health -= damage;
 
         // display health UI
         if(is_Player) {
-            health_UI.DisplayHealth(health);
+            health_UI.DisplayHealth(health, maxHealth);
         }
 
         if (health <= 0f) {

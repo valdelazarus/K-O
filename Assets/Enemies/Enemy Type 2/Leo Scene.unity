@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1448,7 +1448,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 2800656862551228302, guid: b7422aa4855ba4e79aff31fb3b96472e, type: 3}
   - {fileID: 3247411358126883915, guid: 15dc7111d96354c71a370916efe3ae9e, type: 3}
-  maxEnemiesNumber: 2
+  maxEnemiesNumber: 5
 --- !u!4 &1376432901
 Transform:
   m_ObjectHideFlags: 0
@@ -1457,7 +1457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376432899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.58, y: 1.01, z: -0.76}
+  m_LocalPosition: {x: -20.58, y: 0, z: -0.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

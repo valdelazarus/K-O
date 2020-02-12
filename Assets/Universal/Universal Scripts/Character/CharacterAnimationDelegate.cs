@@ -151,7 +151,8 @@ public class CharacterAnimationDelegate : MonoBehaviour {
        
         FindObjectOfType<EnemyManager>().SpawnEnemy();
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 
 } // class
