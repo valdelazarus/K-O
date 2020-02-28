@@ -54,15 +54,16 @@ public class PlayerMovement : MonoBehaviour {
     } // rotation
 
     void AnimatePlayerWalk() { 
-    
-        if(CrossPlatformInputManager.GetAxisRaw(Axis.HORIZONTAL_AXIS) != 0 ||
-                CrossPlatformInputManager.GetAxisRaw(Axis.VERTICAL_AXIS) != 0) {
+    	if (player_Anim) {
+        	if(CrossPlatformInputManager.GetAxisRaw(Axis.HORIZONTAL_AXIS) != 0 ||
+                	CrossPlatformInputManager.GetAxisRaw(Axis.VERTICAL_AXIS) != 0) {
 
-            player_Anim.Walk(true);
+            			player_Anim.Walk(true);
     
-        } else {
-            player_Anim.Walk(false);
-        }
+        	} else {
+            		player_Anim.Walk(false);
+       	 		}
+	}
 
     } // animate player walk
 
