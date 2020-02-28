@@ -5,10 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int score;
+    public GameObject[] playerCharacters;
 
     UIManager uiManager;
 
-    void Start()
+    void Awake()
     {
         uiManager = FindObjectOfType<UIManager>();
         
@@ -21,6 +22,16 @@ public class GameManager : MonoBehaviour
         if (uiManager)
         {
             uiManager.UpdateScoreText(score);
+        }
+
+        if (PlayerPrefs.HasKey("PlayerChar"))
+        {
+            int playerIndex = PlayerPrefs.GetInt("PlayerChar");
+            playerCharacters[playerIndex].SetActive(true);
+        }
+        else
+        {
+            playerCharacters[0].SetActive(true);
         }
     }
 

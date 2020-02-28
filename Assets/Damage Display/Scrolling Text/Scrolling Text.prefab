@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4145432224366610}
   - component: {fileID: 23333572337698204}
   - component: {fileID: 102474813711980750}
+  - component: {fileID: 6150644870729603176}
   - component: {fileID: 114823157770898010}
   m_Layer: 0
   m_Name: Scrolling Text
@@ -86,13 +87,29 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 200
+  m_FontSize: 100
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: e1feb2e968bcc4ca9b1cfeeb7367c5d0, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!111 &6150644870729603176
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982496041618128}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e8d17432c70cc47c68f541be1629a119, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e8d17432c70cc47c68f541be1629a119, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114823157770898010
 MonoBehaviour:
   m_ObjectHideFlags: 0

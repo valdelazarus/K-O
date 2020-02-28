@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b74dff8448444bf8817d0a3fdfd216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Game
+  levelToLoad: Player Character Selection
 --- !u!1 &769012877
 GameObject:
   m_ObjectHideFlags: 0

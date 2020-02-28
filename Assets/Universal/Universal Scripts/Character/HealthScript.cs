@@ -40,7 +40,9 @@ public class HealthScript : MonoBehaviour {
         }
 
         if (health <= 0f) {
-            animationScript.Death();
+            if (animationScript)
+                animationScript.Death();
+                
             characterDied = true;
 
             // if is player deactivate enemy script
@@ -54,6 +56,9 @@ public class HealthScript : MonoBehaviour {
                 FindObjectOfType<GameManager>()?.AddScore(GetComponent<EnemyStats>().scoreValue);
             }
 
+            if(!animationScript)
+                Destroy(gameObject, 1f);
+             
             return;
         }
 

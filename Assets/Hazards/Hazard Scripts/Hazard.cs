@@ -19,7 +19,7 @@ public class Hazard : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == Tags.PLAYER_TAG)
         {
             other.GetComponent<HealthScript>().ApplyDamage(damage, false);
         }
