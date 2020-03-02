@@ -91,7 +91,12 @@ public class CharacterAnimationDelegate : MonoBehaviour {
 
     void SpawnProjectile()
     {
-        Instantiate(projectile, spawn_Projectile_Point.transform.position, Quaternion.identity);
+        GameObject InstProjectile = Instantiate(projectile, spawn_Projectile_Point.transform.position, Quaternion.identity);
+        PlayerProjectile playerProjectile = InstProjectile.GetComponent<PlayerProjectile>();
+        if (playerProjectile)
+        {
+            playerProjectile.direction = transform.parent.forward;
+        }
     }
 
     void Enemy_StandUp() {

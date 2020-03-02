@@ -9,7 +9,8 @@ public enum ComboState {
     PUNCH_2,
     PUNCH_3,
     KICK_1,
-    KICK_2
+    KICK_2,
+    SHOOT
 }
 
 public class PlayerAttack : MonoBehaviour {
@@ -70,7 +71,8 @@ public class PlayerAttack : MonoBehaviour {
             // if the current combo is punch 3 or kick 2
             // return meaning exit because we have no combos to perform
             if (current_Combo_State == ComboState.KICK_2 ||
-                current_Combo_State == ComboState.PUNCH_3)
+                current_Combo_State == ComboState.PUNCH_3 ||
+                current_Combo_State == ComboState.SHOOT)
                 return;
 
             // if the current combo state is NONE, or punch1 or punch2

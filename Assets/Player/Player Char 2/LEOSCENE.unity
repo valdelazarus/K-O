@@ -215,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 2469737770889897905, guid: f323573be76f945c7bcd2e913cbf139c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.799988
+      value: -7.800049
       objectReference: {fileID: 0}
     - target: {fileID: 2469737770889897905, guid: f323573be76f945c7bcd2e913cbf139c,
         type: 3}
@@ -1506,6 +1506,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70b58defb3bca4125b1b6d4b1359cee3, type: 3}
+--- !u!1 &1368117976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1838515683, guid: 0a3138ddcf6ba477e8a41b813e86820f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6004752771813219378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1376432899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,6 +2136,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2798889341843178470}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2798889341843178472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2798889341843178471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56943376a53c45728c8e454b4493967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isShooting: 0
 --- !u!1001 &6004752771813219378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2141,11 +2160,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6004752771615677875, guid: 0a3138ddcf6ba477e8a41b813e86820f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6004752771615677879, guid: 0a3138ddcf6ba477e8a41b813e86820f,
         type: 3}
@@ -2202,5 +2216,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7261187745740020163, guid: 0a3138ddcf6ba477e8a41b813e86820f,
+        type: 3}
+      propertyPath: spawn_Projectile_Point
+      value: 
+      objectReference: {fileID: 1368117976}
+    - target: {fileID: 7261187745740020163, guid: 0a3138ddcf6ba477e8a41b813e86820f,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 7498072884079815786, guid: c78f21c7ba9c14c75ab16ead02439d62,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a3138ddcf6ba477e8a41b813e86820f, type: 3}

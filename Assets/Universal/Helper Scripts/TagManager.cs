@@ -13,6 +13,8 @@ public class AnimationTags {
     public const string KICK_1_TRIGGER = "Kick1";
     public const string KICK_2_TRIGGER = "Kick2";
 
+    public const string SHOOT_TRIGGER = "Shoot";
+
     public const string ATTACK_1_TRIGGER = "Attack1";
     public const string ATTACK_2_TRIGGER = "Attack2";
     public const string ATTACK_3_TRIGGER = "Attack3";

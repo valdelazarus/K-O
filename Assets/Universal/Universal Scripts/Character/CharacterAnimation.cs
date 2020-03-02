@@ -34,6 +34,11 @@ public class CharacterAnimation : MonoBehaviour {
         anim.SetTrigger(AnimationTags.KICK_2_TRIGGER);
     }
 
+    public void Shoot()
+    {
+        anim.SetTrigger(AnimationTags.SHOOT_TRIGGER);
+    }
+
     // ENEMY ANIMATIONS
 
     public void EnemyAttack(int attack) { 

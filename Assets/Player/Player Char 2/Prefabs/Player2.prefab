@@ -3670,9 +3670,9 @@ GameObject:
   - component: {fileID: 6004752771615677878}
   - component: {fileID: 6004752771615677873}
   - component: {fileID: 6004752771615677872}
-  - component: {fileID: 147383369963972137}
   - component: {fileID: 1187600445894309302}
   - component: {fileID: 7356179717797852543}
+  - component: {fileID: 7261187745740020163}
   m_Layer: 8
   m_Name: Player2
   m_TagString: Player
@@ -3739,18 +3739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walk_Speed: 2
   z_Speed: 1.5
---- !u!114 &147383369963972137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6004752771615677875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea8175de1eaf546fa92c6aa33d336be2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1187600445894309302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3776,6 +3764,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce10babc4a4634fb48fd3a2fed9491a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7261187745740020163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6004752771615677875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56943376a53c45728c8e454b4493967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6225142189558948516
@@ -5063,7 +5063,7 @@ Animator:
   m_GameObject: {fileID: 8398100862917678495}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
-  m_Controller: {fileID: 9100000, guid: 97af100058c93484abd9dfeaff800d20, type: 2}
+  m_Controller: {fileID: 9100000, guid: 23e719fbdf8dc4672bde559c989861b2, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -5266,8 +5266,9 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 1838515683}
   left_Leg_Attack_Point: {fileID: 968133705}
   right_Leg_Attack_Point: {fileID: 104053389}
-  spawn_Projectile_Point: {fileID: 0}
-  projectile: {fileID: 0}
+  spawn_Projectile_Point: {fileID: 1838515683}
+  projectile: {fileID: 7498072884079815786, guid: c78f21c7ba9c14c75ab16ead02439d62,
+    type: 3}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: d66ea384f5e554d13b1f10ca6ffccf07, type: 3}
   fall_Sound: {fileID: 8300000, guid: e95e3d31f29ba49b386345970d646efc, type: 3}
