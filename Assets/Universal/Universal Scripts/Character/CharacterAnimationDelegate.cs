@@ -155,9 +155,13 @@ public class CharacterAnimationDelegate : MonoBehaviour {
     void DeactivateGameObject() {
        
         FindObjectOfType<EnemyManager>().SpawnEnemy();
-
+        if (GetComponentInParent<PickupSpawner>())
+        {
+            GetComponentInParent<PickupSpawner>().SpawnRandomPickup(gameObject.transform.parent.position);
+        }
         //gameObject.SetActive(false);
         Destroy(gameObject.transform.parent.gameObject);
+        
     }
 
 } // class

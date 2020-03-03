@@ -84,7 +84,19 @@ public class HealthScript : MonoBehaviour {
 
     } // apply damage
 
-
+    public void AddHealth(float value)
+    {
+        health += value;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        // display health UI
+        if (is_Player)
+        {
+            health_UI.DisplayHealth(health, maxHealth);
+        }
+    }
 
 } // class
 

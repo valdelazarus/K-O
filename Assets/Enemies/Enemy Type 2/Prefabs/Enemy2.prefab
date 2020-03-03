@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 726424504}
   - component: {fileID: 726424505}
   - component: {fileID: 726424506}
+  - component: {fileID: -6194892469218669258}
   m_Layer: 9
   m_Name: Enemy2
   m_TagString: Enemy
@@ -127,6 +128,21 @@ MonoBehaviour:
   chase_Player_After_Attack: 0.2
   isMelee: 0
   childObject: {fileID: 6661363122779210013}
+--- !u!114 &-6194892469218669258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3247411358126883915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1252a190ee4c24d58ba16952bcbc52ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickups:
+  - {fileID: 6418141304865371606, guid: 9c8ada694485848abaff0a23704d5ab2, type: 3}
+  dropRate: 0.5
 --- !u!82 &8896797264899374457
 AudioSource:
   m_ObjectHideFlags: 0
