@@ -93,7 +93,7 @@ public class PlayerProjectileAOE : PlayerProjectile
                 {
                     enemy.GetComponent<HealthScript>().ApplyDamage(damage, false);
                 }
-                enemy.GetComponent<AttackedScrollingText>().OnAttack(damage);
+                enemy.GetComponent<AttackedScrollingText>().OnAttack(damage, isCritical);
 
                 damage = baseDamage;
             }

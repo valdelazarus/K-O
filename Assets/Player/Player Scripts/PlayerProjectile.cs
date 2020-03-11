@@ -74,7 +74,7 @@ public class PlayerProjectile : MonoBehaviour
             {
                 other.GetComponent<HealthScript>().ApplyDamage(damage, false);
             }
-            other.GetComponent<AttackedScrollingText>().OnAttack(damage);
+            other.GetComponent<AttackedScrollingText>().OnAttack(damage, isCritical);
 
             damage = baseDamage;
 

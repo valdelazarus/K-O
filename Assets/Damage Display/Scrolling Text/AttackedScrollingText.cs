@@ -5,15 +5,25 @@ using UnityEngine;
 public class AttackedScrollingText : MonoBehaviour
 {
     public ScrollingText Text;
-    public Color TextColor;
+    public Color normalTextColor;
+    public Color criticalColor;
     public float yOffset;
 
-    public void OnAttack(float damage)
+    public void OnAttack(float damage, bool critical)
     {
         var text = damage.ToString();
 
         var scrollingText = Instantiate(Text, transform.position + Vector3.up * yOffset, Quaternion.identity);
         scrollingText.SetText(text);
-        scrollingText.SetColor(TextColor);
+        if (critical)
+        {
+            scrollingText.SetColor(criticalColor);
+            scrollingText.GetComponent<Animation>().Play();
+        }
+        else
+        {
+            scrollingText.SetColor(normalTextColor);
+        }
+        
     }
 }

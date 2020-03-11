@@ -126,7 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 114823157770898010, guid: 1ed2a89b82d434443bcf3abd198d2125, type: 3}
-  TextColor: {r: 1, g: 0.91456765, b: 0, a: 1}
+  normalTextColor: {r: 1, g: 0.8753323, b: 0.2783019, a: 1}
+  criticalColor: {r: 1, g: 0.58544445, b: 0.1273585, a: 1}
   yOffset: 2
 --- !u!114 &3420201187587845901
 MonoBehaviour:

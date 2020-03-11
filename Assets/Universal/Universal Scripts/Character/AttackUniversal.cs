@@ -67,7 +67,7 @@ public class AttackUniversal : MonoBehaviour {
                     hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
                 }
 
-                hit[0].GetComponent<AttackedScrollingText>().OnAttack(damage);
+                hit[0].GetComponent<AttackedScrollingText>().OnAttack(damage, isCritical);
 
                 damage = baseDamage;
 
