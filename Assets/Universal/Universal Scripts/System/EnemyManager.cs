@@ -30,7 +30,7 @@ public class EnemyManager : MonoBehaviour {
         }
         else
         {
-            int enemy = Random.Range(0, 2);
+            int enemy = Random.Range(0, enemyPrefab.Length);
             Instantiate(enemyPrefab[enemy], transform.position, Quaternion.identity);
         }
     }
