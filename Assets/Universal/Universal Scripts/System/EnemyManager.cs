@@ -7,32 +7,43 @@ public class EnemyManager : MonoBehaviour {
     [SerializeField]
     private GameObject[] enemyPrefab;
 
-    public int maxEnemiesNumber;
+    public int numberOfWaves;
+    public int minEnemiesPerWave;
+    public int maxEnemiesPerWave;
 
-    int currentEnemyCount;
+    int currentWaveCount;
+    int enemiesPerWave;
 
     void Awake() {
 
     }
 
-    void Start() {
-        SpawnEnemy();
+    void Update()
+    {
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+        {
+            SpawnEnemyWave();
+        }
     }
 
-    public void SpawnEnemy() {
-        currentEnemyCount++;
-        if (currentEnemyCount > maxEnemiesNumber)
+    public void SpawnEnemyWave()
+    {
+        currentWaveCount++;
+        if (currentWaveCount > numberOfWaves)
         {
-            //load next level
-
-            //below is temporary
-            FindObjectOfType<LevelManager>().LoadScene("Game Win");
+            FindObjectOfType<LevelManager>().LoadNextScene();
         }
         else
         {
-            int enemy = Random.Range(0, enemyPrefab.Length);
-            Instantiate(enemyPrefab[enemy], transform.position, Quaternion.identity);
+            enemiesPerWave = Random.Range(minEnemiesPerWave, maxEnemiesPerWave + 1);
+            for (int i = 0; i < enemiesPerWave; ++i)
+            {
+                int enemy = Random.Range(0, enemyPrefab.Length);
+                Instantiate(enemyPrefab[enemy], transform.position + Vector3.left*i, Quaternion.identity);
+            }
         }
+        
+
     }
 
-} // class
+} 

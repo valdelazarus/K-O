@@ -41,7 +41,13 @@ public class HealthScript : MonoBehaviour {
 
         if (health <= 0f) {
             if (animationScript)
+            {
                 animationScript.Death();
+            }
+            else
+            {
+                Destroy(gameObject, 1f);
+            }
                 
             characterDied = true;
 
@@ -55,9 +61,7 @@ public class HealthScript : MonoBehaviour {
             {
                 FindObjectOfType<GameManager>()?.AddScore(GetComponent<EnemyStats>().scoreValue);
             }
-
-            if(!animationScript)
-                Destroy(gameObject, 1f);
+                
              
             return;
         }

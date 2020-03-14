@@ -19,6 +19,6 @@ public class CharacterSelection : MonoBehaviour
     public void SelectPlayer(int number)
     {
         PlayerPrefs.SetInt("PlayerChar", number);
-        FindObjectOfType<LevelManager>().LoadScene("Game");
+        FindObjectOfType<LevelManager>().LoadNextScene();
     }
 }

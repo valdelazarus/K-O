@@ -85,14 +85,8 @@ public class PlayerProjectileAOE : PlayerProjectile
 
                 damage = (int)damage;
 
-                if (isCritical)
-                {
-                    enemy.GetComponent<HealthScript>().ApplyDamage(damage, true);
-                }
-                else
-                {
-                    enemy.GetComponent<HealthScript>().ApplyDamage(damage, false);
-                }
+                enemy.GetComponent<HealthScript>().ApplyDamage(damage, true);
+
                 enemy.GetComponent<AttackedScrollingText>().OnAttack(damage, isCritical);
 
                 damage = baseDamage;
