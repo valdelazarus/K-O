@@ -27,10 +27,7 @@ public class HealthScript : MonoBehaviour {
 
     public void ApplyDamage(float damage, bool knockDown) {
 
-        if (characterDied)
-        {
-            return;
-        }
+
 
         health -= damage;
 
@@ -40,7 +37,7 @@ public class HealthScript : MonoBehaviour {
                 health_UI.DisplayHealth(health, maxHealth);
         }
 
-        if (health <= 0f) {
+        if (health <= 0f && !characterDied) {
             if (animationScript)
             {
                 animationScript.Death();
@@ -49,11 +46,10 @@ public class HealthScript : MonoBehaviour {
             {
                 Destroy(gameObject, 1f);
             }
-                
+
             characterDied = true;
 
-            
-            if(is_Player) {
+            if (is_Player) {
                 GameObject.FindWithTag(Tags.ENEMY_TAG)
                     .GetComponent<EnemyMovement>().enabled = false;
             }
