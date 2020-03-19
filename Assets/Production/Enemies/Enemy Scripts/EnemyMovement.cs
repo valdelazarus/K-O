@@ -39,11 +39,14 @@ public class EnemyMovement : MonoBehaviour {
     
     void Update() {
 
-        
-        transform.LookAt(playerTarget);
-        childObject.transform.localRotation = Quaternion.identity;
+        if (playerTarget)
+        {
+            transform.LookAt(playerTarget);
+            childObject.transform.localRotation = Quaternion.identity;
 
-        Attack();
+            Attack();
+        }
+        
     }
 
     void FixedUpdate() {

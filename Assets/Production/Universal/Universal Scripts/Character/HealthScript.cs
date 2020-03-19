@@ -26,17 +26,7 @@ public class HealthScript : MonoBehaviour {
     }
 
     public void ApplyDamage(float damage, bool knockDown) {
-
-
-
-        health -= damage;
-
-      
-        if(is_Player) {
-            if (health_UI)
-                health_UI.DisplayHealth(health, maxHealth);
-        }
-
+        
         if (health <= 0f && !characterDied) {
             if (animationScript)
             {
@@ -62,26 +52,41 @@ public class HealthScript : MonoBehaviour {
              
             return;
         }
+        else if (!characterDied && health > 0f)
+        {
+            health -= damage;
 
-        if(!is_Player) { 
 
-            if(knockDown) { 
+            if (is_Player)
+            {
+                if (health_UI)
+                    health_UI.DisplayHealth(health, maxHealth);
+            }
 
-                if(Random.Range(0, 2) > 0) {
-                    animationScript.KnockDown();
+            else if (!is_Player)
+            {
+
+                if (knockDown)
+                {
+
+                    if (Random.Range(0, 2) > 0)
+                    {
+                        animationScript.KnockDown();
+                    }
+
                 }
+                else
+                {
 
-            } else {
+                    if (Random.Range(0, 3) > 1)
+                    {
+                        animationScript.Hit();
+                    }
 
-                if (Random.Range(0, 3) > 1) {
-                    animationScript.Hit();
                 }
 
             }
-
-        } 
-
-
+        }
 
     } 
 
