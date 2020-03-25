@@ -18,6 +18,11 @@ public class ScoreDisplay : MonoBehaviour
         }
 
         scoreText.text = "Score: " + score;
+
+        if (PlayerPrefs.HasKey("ShieldCount"))
+        {
+            PlayerPrefs.SetInt("ShieldCount", 0);
+        }
     }
 
     

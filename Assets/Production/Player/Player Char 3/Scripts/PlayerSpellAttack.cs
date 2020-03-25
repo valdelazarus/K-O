@@ -11,15 +11,20 @@ public class PlayerSpellAttack : MonoBehaviour
     public float attack1Rate;
     public float attack2Rate;
 
+    public AudioClip attack1Sound;
+    public AudioClip attack2Sound;
+ 
     bool canAttack1 = true, canAttack2 = true;
 
     float currentAttack1Time, currentAttack2Time;
 
-    Vector3 spawnPos; 
+    Vector3 spawnPos;
+
+    AudioSource audioSource;
 
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -28,6 +33,7 @@ public class PlayerSpellAttack : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonDown(Button.FIRE_1) && canAttack1)
         {
+            audioSource.PlayOneShot(attack1Sound);
             spawnPos = transform.position;
             spawnPos.y = 1f;
             GameObject projectile = Instantiate(attack1Projectile, spawnPos, Quaternion.identity);
@@ -38,6 +44,7 @@ public class PlayerSpellAttack : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonDown(Button.FIRE_2) && canAttack2 && !attack2AOE.activeInHierarchy)
         {
+            audioSource.PlayOneShot(attack2Sound);
             attack2AOE.SetActive(true);
             canAttack2 = false;
             currentAttack2Time = Time.time;

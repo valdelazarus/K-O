@@ -50,7 +50,8 @@ public class EnemyMovement : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        FollowTarget();
+        if (playerTarget)
+            FollowTarget();
     }
 
     void FollowTarget() {

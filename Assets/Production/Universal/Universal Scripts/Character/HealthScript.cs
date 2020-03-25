@@ -14,7 +14,10 @@ public class HealthScript : MonoBehaviour {
 
     public bool is_Player;
 
+    public bool invulnerable;
+
     private HealthUI health_UI;
+
 
     void Awake() {
         animationScript = GetComponentInChildren<CharacterAnimation>();
@@ -26,7 +29,11 @@ public class HealthScript : MonoBehaviour {
     }
 
     public void ApplyDamage(float damage, bool knockDown) {
-        
+
+        if (invulnerable)
+        {
+            return;
+        }
         if (health <= 0f && !characterDied) {
             if (animationScript)
             {

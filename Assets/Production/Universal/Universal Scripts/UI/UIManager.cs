@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public Text scoreText;
+    public Text shieldCountText;
 
     void Start()
     {
@@ -21,5 +22,9 @@ public class UIManager : MonoBehaviour
     public void UpdateScoreText(int score)
     {
         scoreText.text = score.ToString();
+    }
+    public void UpdateShieldCountText(int shieldCount)
+    {
+        shieldCountText.text = shieldCount.ToString();
     }
 }

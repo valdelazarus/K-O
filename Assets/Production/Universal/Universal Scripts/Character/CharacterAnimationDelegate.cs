@@ -14,7 +14,7 @@ public class CharacterAnimationDelegate : MonoBehaviour {
     private AudioSource audioSource;
 
     [SerializeField]
-    private AudioClip whoosh_Sound, fall_Sound, ground_Hit_Sound, dead_Sound;
+    private AudioClip whoosh_Sound, fall_Sound, ground_Hit_Sound, dead_Sound, shoot_Sound;
 
     private EnemyMovement enemy_Movement;
 
@@ -109,8 +109,12 @@ public class CharacterAnimationDelegate : MonoBehaviour {
     }
 
     public void Attack_FX_Sound() {
-        audioSource.volume = 0.2f;
         audioSource.clip = whoosh_Sound;
+        audioSource.Play();
+    }
+    public void Shoot_FX_Sound()
+    {
+        audioSource.clip = shoot_Sound;
         audioSource.Play();
     }
 

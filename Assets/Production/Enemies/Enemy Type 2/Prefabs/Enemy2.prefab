@@ -112,6 +112,7 @@ MonoBehaviour:
   maxHealth: 200
   characterDied: 0
   is_Player: 0
+  invulnerable: 0
 --- !u!114 &726424506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickups:
   - {fileID: 6418141304865371606, guid: 9c8ada694485848abaff0a23704d5ab2, type: 3}
+  - {fileID: 2341582382373941110, guid: a9b56d6ba0ea14b4ea09852ac7a7eab4, type: 3}
   dropRate: 0.5
 --- !u!82 &8896797264899374457
 AudioSource:
@@ -153,7 +155,8 @@ AudioSource:
   m_GameObject: {fileID: 6661363122779210013}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1339282833706833206, guid: 24c617dddf13c4ef39cc534900e0f47c,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -273,9 +276,9 @@ MonoBehaviour:
     type: 3}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: d66ea384f5e554d13b1f10ca6ffccf07, type: 3}
-  fall_Sound: {fileID: 8300000, guid: e95e3d31f29ba49b386345970d646efc, type: 3}
+  fall_Sound: {fileID: 8300000, guid: c15dd2c1eef914e888541c12823cd39d, type: 3}
   ground_Hit_Sound: {fileID: 8300000, guid: bb16610f7d97443c79278fd0251f20d3, type: 3}
-  dead_Sound: {fileID: 8300000, guid: ccca65067798a40969e6bde304d5bdeb, type: 3}
+  dead_Sound: {fileID: 8300000, guid: c15dd2c1eef914e888541c12823cd39d, type: 3}
 --- !u!1001 &6661363122779310483
 PrefabInstance:
   m_ObjectHideFlags: 0
