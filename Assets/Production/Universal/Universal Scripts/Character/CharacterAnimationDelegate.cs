@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterAnimationDelegate : MonoBehaviour {
 
     public GameObject left_Arm_Attack_Point, right_Arm_Attack_Point,
-            left_Leg_Attack_Point, right_Leg_Attack_Point, spawn_Projectile_Point, projectile;
+            left_Leg_Attack_Point, right_Leg_Attack_Point, spawn_Projectile_Point, projectile, SpellAttack;
 
     public float stand_Up_Timer = 2f;
 
@@ -97,6 +97,17 @@ public class CharacterAnimationDelegate : MonoBehaviour {
         {
             playerProjectile.direction = transform.parent.forward;
         }
+    }
+
+    void SpawnSpellAttack()
+    {
+        SpellAttack.SetActive(true);
+    }
+
+    IEnumerator StopSpellAttack()
+    {
+        yield return new WaitForSeconds(5);
+        SpellAttack.SetActive(false);
     }
 
     void Enemy_StandUp() {

@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour {
     public float chase_Player_After_Attack = 1f;
 
     private float current_Attack_Time;
-    private float default_Attack_Time = 2f;
+    public float default_Attack_Time = 2f;
 
     private bool followPlayer, attackPlayer;
 
