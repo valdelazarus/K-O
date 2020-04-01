@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HazardSpawner : MonoBehaviour
 {
-    public Transform[] spawnPositions;
+    public Transform[] spawnPositions; //for fixed
+    public Transform[] randomSpawnPositions; //for random
     public GameObject[] hazardPrefabs;
     public float initialDelay;
     public float spawnRate; 
@@ -12,6 +13,7 @@ public class HazardSpawner : MonoBehaviour
     void Start()
     {
         SpawnAllPositions();
+        InvokeRepeating("SpawnRandomPosition", initialDelay, spawnRate);
     }
 
     
@@ -22,18 +24,17 @@ public class HazardSpawner : MonoBehaviour
 
     void SpawnRandomPosition()
     {
-        int rand = Random.Range(0, hazardPrefabs.Length);
-        int randPos = Random.Range(0, spawnPositions.Length);
+        int randPos = Random.Range(0, randomSpawnPositions.Length);
+        int rand = Random.Range(1, hazardPrefabs.Length);
 
-        GameObject hazard = Instantiate(hazardPrefabs[rand], spawnPositions[randPos].position, Quaternion.identity);
+        GameObject hazard = Instantiate(hazardPrefabs[rand], randomSpawnPositions[randPos].position, Quaternion.identity);
         Destroy(hazard, spawnRate);
     }
     void SpawnAllPositions()
     {
-        int rand = Random.Range(0, hazardPrefabs.Length);
         foreach (Transform t in spawnPositions)
         {
-            Instantiate(hazardPrefabs[rand], t.position, Quaternion.identity);
+            Instantiate(hazardPrefabs[0], t.position, Quaternion.identity);
         }
     }
 }
