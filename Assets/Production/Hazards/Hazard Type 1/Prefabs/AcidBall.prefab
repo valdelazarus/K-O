@@ -9532,7 +9532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5152904892672009060}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0032791, y: 0.0052429996, z: 0.0032411998}
   m_Children:
   - {fileID: 5157761822847090510}
@@ -19138,3 +19138,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  affectAll: 0
+  affectRate: 0
+  radius: 0
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  hit_FX_Prefab: {fileID: 0}

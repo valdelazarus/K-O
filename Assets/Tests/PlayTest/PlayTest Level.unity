@@ -705,7 +705,7 @@ MonoBehaviour:
   - {fileID: 3732306226526920240, guid: ea0e3b4b615cdd247aad89860c263069, type: 3}
   - {fileID: 5852528539787908350, guid: 95ae47729575b944cad28608a5320d2b, type: 3}
   initialDelay: 1
-  spawnRate: 20
+  spawnRate: 60
 --- !u!4 &286037557
 Transform:
   m_ObjectHideFlags: 0
