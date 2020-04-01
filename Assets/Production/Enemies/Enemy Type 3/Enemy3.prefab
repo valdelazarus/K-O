@@ -4836,8 +4836,9 @@ MonoBehaviour:
   speed: 1.8
   attack_Distance: 2
   chase_Player_After_Attack: 0.2
+  default_Attack_Time: 4
   isMelee: 0
-  childObject: {fileID: 0}
+  childObject: {fileID: 5811607271876403628}
 --- !u!114 &2654483960903493873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5048,7 +5049,7 @@ MonoBehaviour:
   SpellAttack: {fileID: 6213510431824216398}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: d66ea384f5e554d13b1f10ca6ffccf07, type: 3}
-  fall_Sound: {fileID: 8300000, guid: e95e3d31f29ba49b386345970d646efc, type: 3}
+  fall_Sound: {fileID: 8300000, guid: 16f20de0f727946f2a726601c659c1d6, type: 3}
   ground_Hit_Sound: {fileID: 8300000, guid: bb16610f7d97443c79278fd0251f20d3, type: 3}
   dead_Sound: {fileID: 8300000, guid: dc3aacddf17b743f1a7bf0a01a93174d, type: 3}
   shoot_Sound: {fileID: 0}
@@ -5322,6 +5323,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19800006, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 3}
       propertyPath: InitialModule.startColor.minColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
