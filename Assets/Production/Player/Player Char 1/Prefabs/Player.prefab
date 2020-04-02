@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bf35a4e3874473ea995fd7ecb98ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 300
   characterDied: 0
   is_Player: 1
   invulnerable: 0
@@ -481,11 +481,13 @@ MonoBehaviour:
   right_Leg_Attack_Point: {fileID: 2798889340193124960}
   spawn_Projectile_Point: {fileID: 0}
   projectile: {fileID: 0}
+  SpellAttack: {fileID: 0}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: d9a7a9a81d73a4871853479e3d6d57f1, type: 3}
   fall_Sound: {fileID: 8300000, guid: e95e3d31f29ba49b386345970d646efc, type: 3}
   ground_Hit_Sound: {fileID: 8300000, guid: bb16610f7d97443c79278fd0251f20d3, type: 3}
   dead_Sound: {fileID: 8300000, guid: ccca65067798a40969e6bde304d5bdeb, type: 3}
+  shoot_Sound: {fileID: 0}
 --- !u!1001 &2798889341545581918
 PrefabInstance:
   m_ObjectHideFlags: 0

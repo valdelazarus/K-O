@@ -9,6 +9,7 @@ TagManager:
   - LeftArm
   - LeftLeg
   - PlayerEyes
+  - BossHealthUI
   layers:
   - Default
   - TransparentFX

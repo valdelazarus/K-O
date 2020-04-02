@@ -46,17 +46,20 @@ public class PlayerInventory : MonoBehaviour
     public void AddShield(float duration)
     {
         shieldCount++;
-        uiManager.UpdateShieldCountText(shieldCount);
+        if (uiManager)
+            uiManager.UpdateShieldCountText(shieldCount);
         shieldDuration = duration;
         PlayerPrefs.SetInt("ShieldCount", shieldCount);
     }
-    void UseShield()
+    public void UseShield()
     {
         if (shieldCount <= 0) return;
-        audioSource.PlayOneShot(useShieldSound);
+        if (audioSource)
+            audioSource.PlayOneShot(useShieldSound);
         shieldActive = true;
         shieldCount--;
-        uiManager.UpdateShieldCountText(shieldCount);
+        if(uiManager)
+            uiManager.UpdateShieldCountText(shieldCount);
         PlayerPrefs.SetInt("ShieldCount", shieldCount);
         StopCoroutine(ActivateInvulnerable());
         StartCoroutine(ActivateInvulnerable());

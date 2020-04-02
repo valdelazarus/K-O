@@ -24,6 +24,7 @@ public class HazardSpawner : MonoBehaviour
 
     void SpawnRandomPosition()
     {
+        if (randomSpawnPositions.Length == 0) return;
         int randPos = Random.Range(0, randomSpawnPositions.Length);
         int rand = Random.Range(1, hazardPrefabs.Length);
 

@@ -7,12 +7,16 @@ public class EnemyManager : MonoBehaviour {
     [SerializeField]
     private GameObject[] enemyPrefab;
 
+    public GameObject enemyBoss;
+
     public int numberOfWaves;
     public int minEnemiesPerWave;
     public int maxEnemiesPerWave;
 
     int currentWaveCount;
     int enemiesPerWave;
+
+    bool bossSpawned;
 
     void Awake() {
 
@@ -31,8 +35,17 @@ public class EnemyManager : MonoBehaviour {
         currentWaveCount++;
         if (currentWaveCount > numberOfWaves)
         {
-            Debug.Log("Level cleared!");
-            FindObjectOfType<LevelManager>().LoadNextScene();
+            if (bossSpawned || enemyBoss == null)
+            {
+                Debug.Log("Level cleared!");
+                FindObjectOfType<LevelManager>().LoadNextScene();
+            }
+            else
+            {
+                Debug.Log("Boss appeared!");
+                SpawnBoss();
+            }
+            
         }
         else
         {
@@ -43,8 +56,13 @@ public class EnemyManager : MonoBehaviour {
                 Instantiate(enemyPrefab[enemy], transform.position + Vector3.left*i, Quaternion.identity);
             }
         }
-        
+    }
 
+    public void SpawnBoss()
+    {
+        Debug.Log("Spawning boss!");
+        bossSpawned = true;
+        Instantiate(enemyBoss, transform.position, Quaternion.identity);
     }
 
 } 

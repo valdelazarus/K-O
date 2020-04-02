@@ -398,6 +398,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1984274400669990301, guid: 28ce1534034ee4e0a8a74ddd44d079d8,
+        type: 3}
+      propertyPath: health_UI
+      value: 
+      objectReference: {fileID: 675110889}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ce1534034ee4e0a8a74ddd44d079d8, type: 3}
 --- !u!1 &114970405 stripped
@@ -2157,6 +2162,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356179717797852543, guid: 0a3138ddcf6ba477e8a41b813e86820f,
+        type: 3}
+      propertyPath: health_UI
+      value: 
+      objectReference: {fileID: 675110889}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a3138ddcf6ba477e8a41b813e86820f, type: 3}
 --- !u!1 &1111883975 stripped
@@ -2492,6 +2502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab:
   - {fileID: 3247411358126883915, guid: 15dc7111d96354c71a370916efe3ae9e, type: 3}
+  enemyBoss: {fileID: 0}
   numberOfWaves: 1
   minEnemiesPerWave: 3
   maxEnemiesPerWave: 3
@@ -2696,6 +2707,7 @@ MonoBehaviour:
   spawnPositions:
   - {fileID: 349261041}
   - {fileID: 1307156129}
+  randomSpawnPositions: []
   hazardPrefabs:
   - {fileID: 3688531890646157108, guid: 38900eb1dfe734d40a4edd3f305a6a9e, type: 3}
   initialDelay: 1
@@ -3535,6 +3547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7998378528251579662, guid: 5a8f981e03fad4ca3a571751a7222c10,
+        type: 3}
+      propertyPath: health_UI
+      value: 
+      objectReference: {fileID: 675110889}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a8f981e03fad4ca3a571751a7222c10, type: 3}
 --- !u!1 &2798889341843178471 stripped

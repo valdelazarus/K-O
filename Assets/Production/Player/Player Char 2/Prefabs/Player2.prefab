@@ -3752,7 +3752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bf35a4e3874473ea995fd7ecb98ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 300
   characterDied: 0
   is_Player: 1
   invulnerable: 0
@@ -5285,6 +5285,7 @@ MonoBehaviour:
   spawn_Projectile_Point: {fileID: 1838515683}
   projectile: {fileID: 7498072884079815786, guid: c78f21c7ba9c14c75ab16ead02439d62,
     type: 3}
+  SpellAttack: {fileID: 0}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: 65545c04fa04d4fd9aa80dedc361aba7, type: 3}
   fall_Sound: {fileID: 8300000, guid: e95e3d31f29ba49b386345970d646efc, type: 3}

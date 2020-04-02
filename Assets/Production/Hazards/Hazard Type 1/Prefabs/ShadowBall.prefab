@@ -19030,7 +19030,7 @@ GameObject:
   - component: {fileID: -4886139004138891514}
   - component: {fileID: -6292054944257657102}
   m_Layer: 0
-  m_Name: AcidBall
+  m_Name: ShadowBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19144,4 +19144,5 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 0
-  hit_FX_Prefab: {fileID: 0}
+  hit_FX_Prefab: {fileID: 8659110474539051135, guid: 6e232c220fe134974937fe9b12eac342,
+    type: 3}

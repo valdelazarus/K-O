@@ -28,6 +28,13 @@ public class Hazard : MonoBehaviour
     {
         if (!affectAll && other.tag == Tags.PLAYER_TAG)
         {
+            if (hit_FX_Prefab)
+            {
+                Vector3 hitFX_Pos = other.transform.position;
+                hitFX_Pos.y += 1.3f;
+                Instantiate(hit_FX_Prefab, hitFX_Pos, hit_FX_Prefab.transform.rotation);
+            }
+            
             other.GetComponent<HealthScript>().ApplyDamage(damage, false);
         }
     }

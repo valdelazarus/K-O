@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AcidBall : MonoBehaviour
+public class ShadowBall : MonoBehaviour
 {
     public float speed;
     public float acceleration;

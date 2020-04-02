@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthScript : MonoBehaviour {
 
     public float maxHealth;
-    float health;
+    public float health;
 
     private CharacterAnimation animationScript;
     private EnemyMovement enemyMovement;
@@ -13,6 +13,8 @@ public class HealthScript : MonoBehaviour {
     public bool characterDied;
 
     public bool is_Player;
+
+    public bool is_Boss;
 
     public bool invulnerable;
 
@@ -23,7 +25,7 @@ public class HealthScript : MonoBehaviour {
         animationScript = GetComponentInChildren<CharacterAnimation>();
 
         health = maxHealth;
-        if(is_Player) {
+        if(is_Player || is_Boss) {
             health_UI = GetComponent<HealthUI>();
         }
     }
@@ -72,6 +74,11 @@ public class HealthScript : MonoBehaviour {
 
             else if (!is_Player)
             {
+                if (is_Boss)
+                {
+                    if (health_UI)
+                        health_UI.DisplayHealthUsingScale(health, maxHealth);
+                }
 
                 if (knockDown)
                 {

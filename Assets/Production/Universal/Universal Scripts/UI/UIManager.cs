@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public Text scoreText;
     public Text shieldCountText;
+    public GameObject bossHealthBar;
 
     void Start()
     {
@@ -26,5 +27,9 @@ public class UIManager : MonoBehaviour
     public void UpdateShieldCountText(int shieldCount)
     {
         shieldCountText.text = shieldCount.ToString();
+    }
+    public void ShowBossHealthBar()
+    {
+        bossHealthBar.SetActive(true);
     }
 }

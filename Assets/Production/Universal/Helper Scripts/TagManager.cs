@@ -49,6 +49,7 @@ public class Tags {
     public const string UNTAGGED_TAG = "Untagged";
     public const string MAIN_CAMERA_TAG = "MainCamera";
     public const string HEALTH_UI = "HealthUI";
+    public const string BOSS_HEALTH_UI = "BossHealthUI";
 }
 
 
