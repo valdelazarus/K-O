@@ -2851,6 +2851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1435756678}
   shieldCountText: {fileID: 1897427069}
+  bossHealthBar: {fileID: 0}
 --- !u!1 &1518759014
 GameObject:
   m_ObjectHideFlags: 0

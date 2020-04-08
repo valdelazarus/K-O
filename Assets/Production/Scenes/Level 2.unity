@@ -3792,6 +3792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1435756678}
   shieldCountText: {fileID: 1753872411}
+  bossHealthBar: {fileID: 0}
 --- !u!4 &1503094914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 431050, guid: be9e5607f396e314f9284859db0f54bd,

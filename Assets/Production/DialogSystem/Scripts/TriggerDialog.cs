@@ -6,16 +6,7 @@ public class TriggerDialog : MonoBehaviour
 {
     public string[] sentences;
     
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HazardSpawner : MonoBehaviour
 {
-    public Transform[] spawnPositions; //for fixed
-    public Transform[] randomSpawnPositions; //for random
+    public Transform[] spawnPositions; 
+    public Transform[] randomSpawnPositions; 
     public GameObject[] hazardPrefabs;
     public float initialDelay;
     public float spawnRate; 

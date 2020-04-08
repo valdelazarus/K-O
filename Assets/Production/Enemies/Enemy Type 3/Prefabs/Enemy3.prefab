@@ -4852,8 +4852,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
+  health: 0
   characterDied: 0
   is_Player: 0
+  is_Boss: 0
   invulnerable: 0
 --- !u!114 &3176246487361799795
 MonoBehaviour:
@@ -4899,7 +4901,7 @@ MonoBehaviour:
   pickups:
   - {fileID: 6418141304865371606, guid: 9c8ada694485848abaff0a23704d5ab2, type: 3}
   - {fileID: 2341582382373941110, guid: a9b56d6ba0ea14b4ea09852ac7a7eab4, type: 3}
-  dropRate: 0.3
+  dropRate: 0.5
 --- !u!82 &5524335054103670692
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5047,7 +5049,7 @@ MonoBehaviour:
   spawn_Projectile_Point: {fileID: 0}
   projectile: {fileID: 0}
   SpellAttack: {fileID: 6213510431824216398}
-  stand_Up_Timer: 2
+  stand_Up_Timer: 1
   whoosh_Sound: {fileID: 8300000, guid: d66ea384f5e554d13b1f10ca6ffccf07, type: 3}
   fall_Sound: {fileID: 8300000, guid: 16f20de0f727946f2a726601c659c1d6, type: 3}
   ground_Hit_Sound: {fileID: 8300000, guid: bb16610f7d97443c79278fd0251f20d3, type: 3}

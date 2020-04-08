@@ -44,6 +44,7 @@ public class EnemyAOEDamage : MonoBehaviour
             else
             {
                 DisableSpell();
+                GetComponentInParent<EnemyMovement>().enabled = true;
             }
         }
     }

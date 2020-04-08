@@ -188,8 +188,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Moving using touch joystick. \n\nAttack 1: Button A\nAttack 2: Button B\n\nCombos:
-    Button A x times | Button B x times | Button A + B"
+  m_Text: "Moving using touch joystick. \n\nAttack 1: Button A\nAttack 2: Button B\nUse
+    Shield: Button C\n\nCombos: Button A x times | Button B x times | Button A + B"
 --- !u!222 &359672917
 CanvasRenderer:
   m_ObjectHideFlags: 0

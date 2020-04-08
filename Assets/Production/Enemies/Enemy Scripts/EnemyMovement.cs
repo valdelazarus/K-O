@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-    private CharacterAnimation enemyAnim;
+    protected CharacterAnimation enemyAnim;
 
     private Rigidbody myBody;
     public float speed = 5f;
 
-    private Transform playerTarget;
+    protected Transform playerTarget;
 
     public float attack_Distance = 1f;
     public float chase_Player_After_Attack = 1f;
 
-    private float current_Attack_Time;
+    protected float current_Attack_Time;
     public float default_Attack_Time = 2f;
 
-    private bool followPlayer, attackPlayer;
+    protected bool followPlayer, attackPlayer;
 
     public bool isMelee;
 
@@ -80,7 +80,7 @@ public class EnemyMovement : MonoBehaviour {
 
     } 
 
-    void Attack() {
+    protected virtual void Attack() {
 
         
         if (!attackPlayer)

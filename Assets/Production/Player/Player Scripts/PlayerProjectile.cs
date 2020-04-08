@@ -34,7 +34,7 @@ public class PlayerProjectile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == Tags.ENEMY_TAG)
+        if (other.tag == Tags.ENEMY_TAG && !other.GetComponent<HealthScript>().characterDied)
         {
             Vector3 hitFX_Pos = other.transform.position;
 

@@ -110,8 +110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
+  health: 0
   characterDied: 0
   is_Player: 0
+  is_Boss: 0
   invulnerable: 0
 --- !u!114 &726424506
 MonoBehaviour:
@@ -128,6 +130,7 @@ MonoBehaviour:
   speed: 1.8
   attack_Distance: 3
   chase_Player_After_Attack: 0.2
+  default_Attack_Time: 2
   isMelee: 0
   childObject: {fileID: 6661363122779210013}
 --- !u!114 &-6194892469218669258
@@ -274,11 +277,13 @@ MonoBehaviour:
   spawn_Projectile_Point: {fileID: 6661363122779213363}
   projectile: {fileID: 9097967847061118417, guid: f7c4e2966900b4da59c2f824f7026dc6,
     type: 3}
+  SpellAttack: {fileID: 0}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: d66ea384f5e554d13b1f10ca6ffccf07, type: 3}
   fall_Sound: {fileID: 8300000, guid: c15dd2c1eef914e888541c12823cd39d, type: 3}
   ground_Hit_Sound: {fileID: 8300000, guid: bb16610f7d97443c79278fd0251f20d3, type: 3}
   dead_Sound: {fileID: 8300000, guid: c15dd2c1eef914e888541c12823cd39d, type: 3}
+  shoot_Sound: {fileID: 0}
 --- !u!1001 &6661363122779310483
 PrefabInstance:
   m_ObjectHideFlags: 0

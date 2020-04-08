@@ -238,6 +238,11 @@ PrefabInstance:
       propertyPath: levelTextPanel
       value: 
       objectReference: {fileID: 1221811976}
+    - target: {fileID: 2469737770889897904, guid: f323573be76f945c7bcd2e913cbf139c,
+        type: 3}
+      propertyPath: isTesting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2469737770889897905, guid: f323573be76f945c7bcd2e913cbf139c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3667,9 +3672,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab:
   - {fileID: 2560040286987383933, guid: d939d420336024d9db04ba2e631f50f6, type: 3}
-  enemyBoss: {fileID: 2800656862551228302, guid: 93df9874ebde34c0da1840ad88091d05,
+  - {fileID: 2800656862551228302, guid: b7422aa4855ba4e79aff31fb3b96472e, type: 3}
+  - {fileID: 3247411358126883915, guid: 15dc7111d96354c71a370916efe3ae9e, type: 3}
+  enemyBoss: {fileID: 6543936724812481447, guid: e453ede8451e640f391d9d7578871af5,
     type: 3}
-  numberOfWaves: 3
+  numberOfWaves: 5
   minEnemiesPerWave: 1
   maxEnemiesPerWave: 1
 --- !u!4 &1376432901

@@ -36,6 +36,7 @@ public class HealthScript : MonoBehaviour {
         {
             return;
         }
+
         if (health <= 0f && !characterDied) {
             if (animationScript)
             {
@@ -100,6 +101,29 @@ public class HealthScript : MonoBehaviour {
                 }
 
             }
+        } else if (characterDied && health <= 0f)
+        {
+            if (animationScript)
+            {
+                animationScript.Death();
+            }
+            else
+            {
+                Destroy(gameObject, 1f);
+            }
+            if (is_Player)
+            {
+                GameObject.FindWithTag(Tags.ENEMY_TAG)
+                    .GetComponent<EnemyMovement>().enabled = false;
+            }
+
+            else
+            {
+                FindObjectOfType<GameManager>()?.AddScore(GetComponent<EnemyStats>().scoreValue);
+            }
+
+
+            return;
         }
 
     } 

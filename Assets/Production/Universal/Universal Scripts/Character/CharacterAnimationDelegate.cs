@@ -102,12 +102,20 @@ public class CharacterAnimationDelegate : MonoBehaviour {
     void SpawnSpellAttack()
     {
         SpellAttack.SetActive(true);
+        if (gameObject.CompareTag(Tags.ENEMY_TAG))
+        {
+            enemy_Movement.enabled = false;
+        }
     }
 
     IEnumerator StopSpellAttack()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(5f);
         SpellAttack.SetActive(false);
+        if (gameObject.CompareTag(Tags.ENEMY_TAG))
+        {
+            enemy_Movement.enabled = true;
+        }
     }
 
     void Enemy_StandUp() {
@@ -163,7 +171,7 @@ public class CharacterAnimationDelegate : MonoBehaviour {
     }
 
     void CharacterDied() {
-        Invoke("DeactivateGameObject", 1f);
+        DeactivateGameObject();
     }
 
     void DeactivateGameObject() {

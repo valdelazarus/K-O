@@ -6,14 +6,4 @@ public class EnemyStats : MonoBehaviour
 {
     public int scoreValue;
 
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
 }

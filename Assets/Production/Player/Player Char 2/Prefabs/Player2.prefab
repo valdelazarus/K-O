@@ -48,8 +48,8 @@ MonoBehaviour:
     m_Bits: 512
   radius: 1
   damage: 5
-  minDamage: 5
-  maxDamage: 10
+  minDamage: 10
+  maxDamage: 20
   criticalMultiplier: 1.5
   criticalChance: 0.05
   is_Player: 1
@@ -103,8 +103,8 @@ MonoBehaviour:
     m_Bits: 512
   radius: 1
   damage: 5
-  minDamage: 5
-  maxDamage: 10
+  minDamage: 10
+  maxDamage: 20
   criticalMultiplier: 1.5
   criticalChance: 0.05
   is_Player: 1
@@ -158,8 +158,8 @@ MonoBehaviour:
     m_Bits: 512
   radius: 1
   damage: 5
-  minDamage: 5
-  maxDamage: 10
+  minDamage: 10
+  maxDamage: 20
   criticalMultiplier: 1.5
   criticalChance: 0.05
   is_Player: 1
@@ -213,8 +213,8 @@ MonoBehaviour:
     m_Bits: 512
   radius: 1
   damage: 5
-  minDamage: 5
-  maxDamage: 10
+  minDamage: 10
+  maxDamage: 20
   criticalMultiplier: 1.5
   criticalChance: 0.05
   is_Player: 1
@@ -3752,9 +3752,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bf35a4e3874473ea995fd7ecb98ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 400
+  health: 0
   characterDied: 0
   is_Player: 1
+  is_Boss: 0
   invulnerable: 0
 --- !u!114 &7356179717797852543
 MonoBehaviour:
@@ -3768,6 +3770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce10babc4a4634fb48fd3a2fed9491a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBoss: 0
 --- !u!114 &7261187745740020163
 MonoBehaviour:
   m_ObjectHideFlags: 0

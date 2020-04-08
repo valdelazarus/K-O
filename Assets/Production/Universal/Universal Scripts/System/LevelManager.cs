@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject levelTextPanel;
 
+    public bool isTesting;
+
     string sceneToLoad;
     int sceneIndex;
 
@@ -48,8 +50,16 @@ public class LevelManager : MonoBehaviour
     }
     public void LoadNextScene()
     {
-        int nextSceneIndex = 1 + SceneManager.GetActiveScene().buildIndex;
-        LoadScene(nextSceneIndex);
+        if (isTesting)
+        {
+            LoadScene("Game Win");
+        }
+        else
+        {
+            int nextSceneIndex = 1 + SceneManager.GetActiveScene().buildIndex;
+            LoadScene(nextSceneIndex);
+        }
+        
     }
     public void LoadSelectedScene()
     {

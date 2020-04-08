@@ -436,9 +436,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bf35a4e3874473ea995fd7ecb98ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 400
+  health: 0
   characterDied: 0
   is_Player: 1
+  is_Boss: 0
   invulnerable: 0
 --- !u!114 &1984274400669990301
 MonoBehaviour:
@@ -452,6 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce10babc4a4634fb48fd3a2fed9491a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBoss: 0
 --- !u!114 &188426062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,8 +470,8 @@ MonoBehaviour:
   attack1Projectile: {fileID: 7498072884079815786, guid: b47b5396c410e41a2bf1672366e592d0,
     type: 3}
   attack2AOE: {fileID: 1984274400066868745}
-  attack1Rate: 1
-  attack2Rate: 7
+  attack1Rate: 0.5
+  attack2Rate: 5
   attack1Sound: {fileID: 8300000, guid: 7875e59e2fcb24edf92e42e4232732c0, type: 3}
   attack2Sound: {fileID: 8300000, guid: 16f20de0f727946f2a726601c659c1d6, type: 3}
 --- !u!114 &5722107084258386652

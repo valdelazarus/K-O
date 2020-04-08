@@ -56,6 +56,8 @@ public class PlayerProjectileAOE : PlayerProjectile
         {
             foreach(Collider enemy in hit)
             {
+                if (enemy.GetComponent<HealthScript>().characterDied) return;
+
                 Vector3 hitFX_Pos = enemy.transform.position;
                 hitFX_Pos.y += 1.3f;
 
