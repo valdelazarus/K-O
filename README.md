@@ -12,3 +12,8 @@ K-O is a 3D mobile fighting game that aims to provide entertaining and engaging 
 3. Open the project folder with Unity and make sure to check the title bar of the Unity Editor window that it indicates Android as the current platform the project is running for.
 4. Open the scene you want to check in Assets -> Production -> Scenes folder.
 5. When you hit Play to test the game in Unity Editor, since it is a project for Android, only mobile touch inputs on screen can be used. You can use mouse to click on these on-screen inputs to control the character or use Unity Remote on your mobile device to test the game (Instructions on how to use Unity Remote can be found online). 
+
+## How To Run Tests
+
+1. Test codes can be checked in TestSuite.cs under Assets --> Tests folder.
+2. To run these tests, open Unity Test Runner, select "Edit Mode", press "Run All" or "Run Selected". 
